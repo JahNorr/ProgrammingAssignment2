@@ -1,18 +1,12 @@
-
-rm(y)
-
-
-x<-makeVector(NULL)
-
-x<-makeVector(iris$Petal.Width)
+source("./cachematrix.R")
 
 
+mm<-matrix(c(1,0,0,0,1,0,1,1,1), nrow = 3, ncol = 3)
 
-cachemean(x)
+mmcache<-makeCacheMatrix(mm)
+cacheSolve(mmcache)
 
-x
-
-
+cacheSolve(mmcache)
 
 
 makeVector <- function(x = numeric()) {
